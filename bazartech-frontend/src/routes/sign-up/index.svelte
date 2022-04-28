@@ -1,10 +1,11 @@
 <script>
   let email = '';
   let password = '';
+  let name = '';
   let confirm_password = '';
 
   const handleSubmit = () => {
-    console.log(email, password, confirm_password);
+    console.log(email, name, password, confirm_password);
     // Cadastrar na API
     // Logar na API
     // Adicionar user no store de usuarios
@@ -21,6 +22,7 @@
   <h1>Criar conta</h1>
   <form action="" on:submit|preventDefault={handleSubmit}>
     <input type="text" name="email" id="email" placeholder="E-mail" bind:value={email} />
+    <input type="text" name="name" id="name" placeholder="Node" bind:value={name}>
     <input type="password" name="password" placeholder="Senha" bind:value={password} />
     <input type="password" name="confirm_password" placeholder="Insira a senha novamente" bind:value={confirm_password} />
     <input type="submit" name="submit" id="submit" />
