@@ -1,7 +1,15 @@
+<script>
+  import { page } from '$app/stores';
+</script>
+
 <ul>
   <li>bazartech</li>
-  <li><a href="/sign-up">Criar conta</a></li>
-  <li><a href="/">Login</a></li>
+  {#if $page.url.pathname !== '/sign-up'}
+    <li><a href="/sign-up">Criar conta</a></li>
+  {/if}
+  {#if $page.url.pathname !== '/'}
+    <li><a href="/">Login</a></li>
+  {/if}
 </ul>
 
 <slot />
