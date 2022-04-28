@@ -6,6 +6,7 @@
 <style>
   li {
     display: inline;
+    margin: 0 10px;
   }
 
   .title {
@@ -31,7 +32,7 @@
 
   .flex-wrapper {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -52,7 +53,7 @@
     <ul>
       <li class="title">bazartech</li>
       <div class="right-menu">
-        <li>Anúncios |</li>
+        <li>Anúncios</li> |
       {#if $page.url.pathname !== '/sign-up' && !$user}
         <li class="menu-button"><a href="/sign-up">Criar conta</a></li>
       {/if}

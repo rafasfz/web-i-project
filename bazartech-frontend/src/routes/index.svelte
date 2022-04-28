@@ -35,12 +35,16 @@
     margin: 0 20px;
   }
 
-  input {
-    display: block;
-  }
-
   .login {
     text-align: right;
+    width: 100%;
+    float: right;
+    margin-right: auto;
+  }
+
+  input {
+    margin: 4px 0;
+    width: 300px;
   }
 
 </style>
@@ -60,10 +64,10 @@
   
   <div class="login">
     <form on:submit|preventDefault={handleSubmit}>
-      <input type="text" name="email" id="email" placeholder="E-mail" bind:value={email} />
-      <input type="password" name="password" placeholder="Senha" bind:value={password} />
+      <input type="text" name="email" id="email" placeholder="E-mail" bind:value={email} /> <br>
+      <input type="password" name="password" placeholder="Senha" bind:value={password} /> <br>
       <input type="checkbox" name="remeber_password" id="remeber_password" bind:value={remeber_password} />
-      <label for="remeber_password">Lembrar senha</label>
+      <label for="remeber_password">Lembrar senha</label> <br>
       <input type="submit" name="submit" id="submit" />
     </form>
   </div>
