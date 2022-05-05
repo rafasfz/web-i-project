@@ -26,29 +26,6 @@
   };
 </script>
 
-<style>
-  .flex-wrapper {
-    margin-top: 100px;
-    display: flex;
-    min-height: 100vh;
-    justify-content: flex-start;
-    margin: 0 20px;
-  }
-
-  .login {
-    text-align: right;
-    width: 100%;
-    float: right;
-    margin-right: auto;
-  }
-
-  input {
-    margin: 4px 0;
-    width: 300px;
-  }
-
-</style>
-
 <div class="flex-wrapper">
   <div class="content">
     <h2>Anuncie ou compre de maneira mais fácil</h2>
