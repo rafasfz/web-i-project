@@ -1,29 +1,10 @@
 <script>
   import { goto } from '$app/navigation';
-  import { user } from '../stores/user';
-
-  if($user) {
-    goto('/dashboard');
-  }
+  import * as cookie from 'cookie';
 
   let email = '';
   let password = '';
   let remeber_password = false;
-
-  const handleSubmit = () => {
-    console.log(email, password, remeber_password);
-    // Logar na API
-    // Adicionar user no store de usuarios
-    // Redirecionar para a home
-    // Adicionar user e token no cookie o localstorage
-
-    $user = {
-      email,
-      password,
-      remeber_password
-    };
-    goto('/dashboard');
-  };
 </script>
 
 <div class="flex-wrapper">
@@ -40,8 +21,8 @@
   </div>
   
   <div class="login">
-    <form on:submit|preventDefault={handleSubmit}>
-      <input type="text" name="email" id="email" placeholder="E-mail" bind:value={email} /> <br>
+    <form action="/auth/login/" method="post">
+      <input type="text" name="username" id="username" placeholder="usuário" bind:value={email} /> <br>
       <input type="password" name="password" placeholder="Senha" bind:value={password} /> <br>
       <input type="checkbox" name="remeber_password" id="remeber_password" bind:value={remeber_password} />
       <label for="remeber_password">Lembrar senha</label> <br>

@@ -1,6 +1,5 @@
 <script>
-  import { page } from '$app/stores';
-  import { user } from '../stores/user';
+  import { session } from '$app/stores';
 </script>
 
 <div class="flex-wrapper">
@@ -9,11 +8,14 @@
       <li class="title">bazartech</li>
       <div class="right-menu">
         <li>Anúncios</li> |
-      {#if $page.url.pathname !== '/sign-up' && !$user}
+      {#if !$session.user}
         <li class="menu-button"><a href="/sign-up">Criar conta</a></li>
       {/if}
-      {#if $page.url.pathname !== '/' && !$user}
+      {#if !$session.user}
         <li class="menu-button"><a href="/">Login</a></li>
+      {/if}
+      {#if $session.user}
+        <li class="menu-button"><a href="/auth/logout">Logout</a></li>
       {/if}
       </div>
     </ul>
