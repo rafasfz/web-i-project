@@ -24,8 +24,6 @@ export const handle = async ({ event, resolve }) => {
 	];
 
 	if (!event.locals.access && !publicUrls.includes(event.url.pathname)) {
-		console.log(import.meta.env.BASE_URL + '/');
-		console.log('oi');
 		return Response.redirect(import.meta.env.VITE_BASE_URL + '/');
 	}
 
