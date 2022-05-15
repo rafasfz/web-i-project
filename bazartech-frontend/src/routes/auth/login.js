@@ -27,8 +27,6 @@ export const post = async (event) => {
 		httpOnly: true
 	});
 
-	console.log(access_cookie);
-
 	const refresh_cookie = cookie.serialize('refresh', refresh, {
 		path: '/dashboard',
 		httpOnly: true
