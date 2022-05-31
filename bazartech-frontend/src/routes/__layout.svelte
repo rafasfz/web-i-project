@@ -160,7 +160,7 @@
     <ul id="header-content">
       <li class="title">
         <a href="/">
-          <img src="/src/assets/bazartech.png" alt="Logo do BazarTech">
+          <img src="../assets/bazartech.png" alt="Logo do BazarTech">
         </a>
       </li>
       <div class="right-menu">
