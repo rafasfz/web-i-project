@@ -1,7 +1,7 @@
 <script>
   import { goto } from '$app/navigation';
   import * as cookie from 'cookie';
-  import loginImg from '/src/assets/login-image';
+  import loginImg from '/src/assets/login-image.svg';
 
   let email = '';
   let password = '';
