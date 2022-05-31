@@ -1,6 +1,7 @@
 <script>
   import { goto } from '$app/navigation';
   import * as cookie from 'cookie';
+  import loginImg from '/src/assets/login-image';
 
   let email = '';
   let password = '';
@@ -159,7 +160,7 @@
       </div>
     </div>
     <div class="image">
-      <img src="/src/assets/login-image.svg" alt="Ilustração simulando o sistema Bazartech">
+      <img src={loginImg} alt="Ilustração simulando o sistema Bazartech">
     </div>
   </div>
   
