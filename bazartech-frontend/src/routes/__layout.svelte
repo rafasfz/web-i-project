@@ -1,21 +1,10 @@
 <script>
-  const src = '/src/assets/bazartech.png';
+  import logo from '/src/assets/bazartech.png';
   import { session } from '$app/stores';
 </script>
 
 
 <style>
-  /* :global(html,body){
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
-    position: relative;
-  } */
-
   :global(:root){
     --primary-color: #0C1618;
     --second-color: #004643;
@@ -161,7 +150,7 @@
     <ul id="header-content">
       <li class="title">
         <a href="/">
-          <img {src} alt="Logo do BazarTech">
+          <img  src={logo} alt="Logo do BazarTech">
         </a>
       </li>
       <div class="right-menu">

@@ -166,10 +166,10 @@
   <div class="form">
     <h2>Login</h2>
     <form action="/auth/login/" method="post">
-      <input type="text" name="username" id="username" placeholder="Usuário" bind:value={email} /> <br>
-      <input type="password" name="password" placeholder="Senha" bind:value={password} /> <br>
+      <input type="text" name="username" id="username" placeholder="Usuário" bind:value={email} required/> <br>
+      <input type="password" name="password" placeholder="Senha" bind:value={password} required/> <br>
       <div class="password-content">
-        <input type="checkbox" name="remeber_password" id="remeber_password" bind:value={remeber_password} />
+        <input type="checkbox" name="remeber_password" id="remeber_password" bind:value={remeber_password}/>
         <label for="remeber_password">Lembrar senha</label> <br>
       </div>
       <div class="btn-container">
