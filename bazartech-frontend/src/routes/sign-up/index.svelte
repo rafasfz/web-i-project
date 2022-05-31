@@ -1,6 +1,6 @@
 <script>
   import axios from 'axios';
-  import addUserImg from '/src/assets/add-count-image';
+  import addUserImg from '/src/assets/add-count-image.svg';
 
   let email = '';
   let password = '';
