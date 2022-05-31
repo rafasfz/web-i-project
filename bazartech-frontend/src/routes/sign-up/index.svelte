@@ -166,9 +166,9 @@
     <h1>Criar conta</h1>
     <form action="/auth/sign-up" method="POST">
       <div>
-        <input type="text" name="email" id="email" placeholder="E-mail" bind:value={email} />
-        <input type="password" name="password" placeholder="Senha" bind:value={password} />
-        <input type="password" name="confirm_password" placeholder="Insira a senha novamente" bind:value={confirm_password} />
+        <input type="text" name="email" id="email" placeholder="E-mail" bind:value={email} required/>
+        <input type="password" name="password" placeholder="Senha" bind:value={password} required/>
+        <input type="password" name="confirm_password" placeholder="Insira a senha novamente" bind:value={confirm_password} required/>
       </div>
       <!-- <div>
         <p>Dados Pessoais:</p>
