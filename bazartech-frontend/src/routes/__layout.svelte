@@ -157,10 +157,10 @@
       <div class="right-menu">
         <li id="anuncio">Anúncios</li> 
         <hr class="divider" width="1" size="30">
-      {#if !$session.user && $page.path === '/'}
+      {#if !$session.user && $page.url.pathname === '/'}
         <li class="btn menu-button"><a href="/sign-up">Criar conta</a></li>
       {/if}
-      {#if !$session.user && $page.path === '/sign-up/'}
+      {#if !$session.user && $page.url.pathname === '/sign-up/'}
        <li class="menu-button"><a href="/">Login</a></li>
       {/if}
       {#if $session.user}
