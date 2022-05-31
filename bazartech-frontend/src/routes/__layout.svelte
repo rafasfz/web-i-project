@@ -1,4 +1,5 @@
 <script>
+  const src = '../assets/bazartech.png';
   import { session } from '$app/stores';
 </script>
 
@@ -160,7 +161,7 @@
     <ul id="header-content">
       <li class="title">
         <a href="/">
-          <img src="../assets/bazartech.png" alt="Logo do BazarTech">
+          <img {src} alt="Logo do BazarTech">
         </a>
       </li>
       <div class="right-menu">
