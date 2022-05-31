@@ -1,5 +1,5 @@
 <script>
-  const src = '../assets/bazartech.png';
+  const src = '/src/assets/bazartech.png';
   import { session } from '$app/stores';
 </script>
 
