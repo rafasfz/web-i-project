@@ -160,7 +160,7 @@
       {#if !$session.user && $page.url.pathname === '/'}
         <li class="btn menu-button"><a href="/sign-up">Criar conta</a></li>
       {/if}
-      {#if !$session.user && $page.url.pathname === '/sign-up/'}
+      {#if !$session.user && $page.url.pathname === '/sign-up'}
        <li class="btn menu-button"><a href="/">Login</a></li>
       {/if}
       {#if $session.user}
