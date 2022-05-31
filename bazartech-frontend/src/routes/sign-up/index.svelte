@@ -1,5 +1,6 @@
 <script>
   import axios from 'axios';
+  import addUserImg from '/src/assets/add-count-image';
 
   let email = '';
   let password = '';
@@ -158,7 +159,7 @@
       </div>
     </div>
     <div class="image">
-      <img src="/src/assets/add-count-image.svg" alt="Ilustração simulando o sistema Bazartech">
+      <img src={addUserImg} alt="Ilustração simulando o sistema Bazartech">
     </div>
   </div>
   
