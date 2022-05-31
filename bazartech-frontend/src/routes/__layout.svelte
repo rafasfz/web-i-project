@@ -1,6 +1,7 @@
 <script>
   import logo from '/src/assets/bazartech.png';
   import { session } from '$app/stores';
+  import { page } from '$app/stores';
 </script>
 
 
@@ -156,11 +157,11 @@
       <div class="right-menu">
         <li id="anuncio">Anúncios</li> 
         <hr class="divider" width="1" size="30">
-      {#if !$session.user}
+      {#if !$session.user && $page.path === '/'}
         <li class="btn menu-button"><a href="/sign-up">Criar conta</a></li>
       {/if}
-      {#if !$session.user}
-       <!-- <li class="menu-button"><a href="/">Login</a></li>-->
+      {#if !$session.user && $page.path === '/sign-up/'}
+       <li class="menu-button"><a href="/">Login</a></li>
       {/if}
       {#if $session.user}
         <li class="menu-button"><a href="/auth/logout">Logout</a></li>
