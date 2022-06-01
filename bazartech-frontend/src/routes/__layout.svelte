@@ -15,6 +15,12 @@
         <li class="menu-button"><a href="/">Login</a></li>
       {/if}
       {#if $session.user}
+        <li class="menu-button"><a href="/dashboard">Produtos</a></li>
+      {/if}
+      {#if $session.user}
+        <li class="menu-button"><a href="/products/register">Anuncie aqui</a></li>
+      {/if}
+      {#if $session.user}
         <li class="menu-button"><a href="/auth/logout">Logout</a></li>
       {/if}
       </div>

@@ -1,5 +1,6 @@
 import * as cookie from 'cookie';
 import api from '../../services/api';
+import jwt_decode from 'jwt-decode';
 
 export const post = async (event) => {
 	const data = await event.request.formData();
@@ -34,26 +35,28 @@ export const post = async (event) => {
 		password
 	});
 
+	const { user_id } = jwt_decode(access);
+
 	const {
 		data: { user }
-	} = await api.get('/auth/users/me/', {
+	} = await api.get(`/auth/users/${String(user_id)}/`, {
 		headers: {
 			Authorization: `Bearer ${access}`
 		}
 	});
 
 	const access_cookie = cookie.serialize('access', access, {
-		path: '/dashboard',
+		path: '/',
 		httpOnly: true
 	});
 
 	const refresh_cookie = cookie.serialize('refresh', refresh, {
-		path: '/dashboard',
+		path: '/',
 		httpOnly: true
 	});
 
 	const user_cookie = cookie.serialize('user', user, {
-		path: '/dashboard',
+		path: '/',
 		httpOnly: true
 	});
 
