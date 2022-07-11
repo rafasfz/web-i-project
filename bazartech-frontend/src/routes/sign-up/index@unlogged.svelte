@@ -1,34 +1,3 @@
-<script>
-  import axios from 'axios';
-  import addUserImg from '/src/assets/add-count-image.svg';
-
-  let email = '';
-  let password = '';
-  let name = '';
-  let username = '';
-  let confirm_password = '';
-  let address = {
-    city: '',
-    state: '',
-    zip_code: '',
-    street: '',
-    number: '',
-    district: '',
-  };
-
-  axios.get(`${import.meta.env.VITE_API_URL}/auth/users`, 
-    {headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-    }}
-  ).then(response => {
-      const { data } = response;
-      console.log(data);
-  }).catch(error => {
-      console.log(error);
-  });
-</script>
-
 <style>
 
   #adduser-content {
@@ -148,6 +117,36 @@
 
 </style>
 
+<script>
+  import axios from 'axios';
+  import addUserImg from '/src/assets/add-count-image.svg';
+
+  let email = '';
+  let password = '';
+  let name = '';
+  let username = '';
+  let confirm_password = '';
+  let address = {
+    city: '',
+    state: '',
+    zip_code: '',
+    street: '',
+    number: '',
+    district: '',
+  };
+
+  axios.get(`${import.meta.env.VITE_API_URL}/auth/users`, 
+    {headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    }}
+  ).then(response => {
+      const { data } = response;
+      console.log(data);
+  }).catch(error => {
+      console.log(error);
+  });
+</script>
 
 <div id="adduser-content">
   <div class="content">

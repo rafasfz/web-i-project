@@ -5,13 +5,13 @@
 
 </script>
 
-<h1>Dashboard</h1>
+<h1>Produtos</h1>
 <div>
   {#each products as product}
     <div>
       <div>
         {#if product.images_display.length > 0}
-          <img src="https://ipfs.io/ipfs/{product.images_display[0].image}" alt="{product.name}" width="287" height="190" style="object-fit: cover;" />
+          <img src="{product.images_display[0].image}" alt="{product.name}" width="287" height="190" style="object-fit: cover;" />
         {:else}
           Sem imagem
         {/if}

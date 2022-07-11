@@ -59,7 +59,7 @@ export const handle = async ({ event, resolve }) => {
 		event.locals.access = access;
 	}
 
-	const response = await resolve(event);
+	const response = await resolve(event, { ssr: false });
 
 	return response;
 };

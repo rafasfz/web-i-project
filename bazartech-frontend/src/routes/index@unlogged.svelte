@@ -1,13 +1,3 @@
-<script>
-  import { goto } from '$app/navigation';
-  import * as cookie from 'cookie';
-  import loginImg from '/src/assets/login-image.svg';
-
-  let email = '';
-  let password = '';
-  let remeber_password = false;
-</script>
-
 <style>
 	#login-content{
     width: 100%;
@@ -144,6 +134,17 @@
 
 
 </style>
+
+
+<script>
+  import { goto } from '$app/navigation';
+  import * as cookie from 'cookie';
+  import loginImg from '/src/assets/login-image.svg';
+
+  let email = '';
+  let password = '';
+  let remeber_password = false;
+</script>
 
 <div id="login-content">
   <div class="content">
